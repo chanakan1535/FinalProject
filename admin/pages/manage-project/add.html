@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สร้างโปรเจ็ค</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style/index.css">
+</head>
+
+<body>
+    <div class="add-staff">
+        <div class="bar">
+            <div>
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    Management System
+                </div>
+            </div>
+            <div class="user">
+                User Admin
+                <div class="dropdown">
+                    <div class="ic-dropdown">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="../edit-password-admin.html">เปลี่ยนรหัสผ่าน</a>
+                        <a href="../index.html">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-menu">
+            <div class="go-back">
+                <a href="./index.html">
+                    <div class="icon page-name">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+                <div class="details">
+                   สร้างโปรเจ็ค
+                </div>
+            </div>
+        </div>
+        <div class="main-add">
+            <div class="data-create-project">
+                <div class="form-staff">
+                    <label class="section">ชื่อโปรเจ็ค</label>
+                    <input class="message employeename" type="text" name="employeename" placeholder="ชื่อโปรเจ็ค">
+                </div>
+                <div class="form-staff">
+                    <label class="section">วัน/เดือน/ปี</label>
+                    <input class="message" placeholder="เริ่มต้น" type="text" onfocus="(this.type = 'date')" id="date">
+                </div>
+                <div class="form-staff">
+                    <label class="section">วัน/เดือน/ปี</label>
+                    <input class="message" placeholder="สิ้นสุด" type="text" onfocus="(this.type = 'date')" id="date">
+                </div>
+            </div>
+            <div class="approve">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <div class="status-project">
+                    สถานะ
+                </div>
+            </div>
+            <div class="submit">
+                <a class="button-submit" href="./index.html">
+                    <button class="cancel" input type="submit" value="ยกเลิก">ยกเลิก</button>
+                </a>
+                <a class="button-submit" href="./index.html">
+                    <button class="confirm" input type="submit" value="ยืนยัน">ยืนยัน</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

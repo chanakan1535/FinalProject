@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานการเข้างาน</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/index.css">
+    
+    
+</head>
+
+<body>
+    <div class="report">
+        <div class="bar">
+            <div>
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    Management System
+                </div>
+            </div>
+            <div class="user">
+                User Admin
+                <div class="dropdown">
+                    <div class="ic-dropdown">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="../edit-password-admin.html">เปลี่ยนรหัสผ่าน</a>
+                        <a href="../index.html">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-menu">
+            <div class="go-back">
+                <a href="./index.html">
+                    <div class="icon page-name">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </a>
+                <div class="details">
+                    รายงานการเข้างาน - เลิกงาน
+                </div>
+            </div>
+        </div>
+        <div class="data-report">
+            <div class="report-data">
+                <div class="head-report">
+                    <div>
+                        <div class="name">
+                            สรุปการเข้างาน-เลิกงาน
+                        </div>
+                    </div>
+                    <div class="select-data">
+                        <div class="search-data-staff">
+                            <input class="search-data" type="text" placeholder="ค้นหา..">
+                            <img class="ic-search" src="../../assets/icons/ic-search.png">
+                        </div>
+                        <input class="start-time" placeholder="เริ่มต้น" type="text" onfocus="(this.type = 'date')" id="date">
+                        <div class="center">
+                            -
+                        </div>
+                        <input class="end-time" placeholder="สิ้นสุด" type="text" onfocus="(this.type = 'date')" id="date">
+                    </div>
+                    <div class="total-working-hours">
+                        <div class="total-time">
+                            รวมการทำงานล่วงเวลา : 124
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="table">
+                    <table id="customers-report">
+                        <tr>
+                            <th>ชื่อ-สกุล</th>
+                            <th>ตรงเวลา</th>
+                            <th>สาย</th>
+                        </tr>
+                        <tr>
+                            <td>กล้วยหอม จอมซน</td>
+                            <td>200 วัน</td>
+                            <td>200 วัน</td>
+                        </tr>
+                        <tr>
+                            <td>ปราณี สายแสง</td>
+                            <td>100 วัน</td>
+                            <td>50 วัน</td>
+                        </tr>
+                        <tr>
+                            <td>แอปเปิ้ล</td>
+                            <td>300 วัน</td>
+                            <td>65 วัน</td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                        <tr>
+                            <td>มานี</td>
+                            <td>150 วัน</td>
+                            <td>215 วัน </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <div class="next-page">
+                    <div class="left">
+                        <div class="show">
+                            แสดง
+                        </div>
+                        <input class="number" type="text" value="" placeholder="10">
+                        <div class="list">
+                            รายการ/หน้า
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button class="back" type="submit" value="">
+                            <img class="group" src="../../assets/icons/ic-less than.png">
+                        </button>
+                        <button class="page-one" type="submit" value="">
+                            <div>
+                                1
+                            </div>
+                        </button>
+                        <button class="page-two" type="submit" value="">
+                            <div>
+                                2
+                            </div>
+                        </button>
+                        <button class="next" type="submit" value="">
+                            <img class="group" src="../../assets/icons/ic-greater than.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

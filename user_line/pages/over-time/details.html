@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดการกรอกข้อมูลล่วงเวลา</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/index.css">
+</head>
+
+<body>
+    <div class="details">
+        <div class="second-menu">
+            <div class="head-bar">
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    management System
+                </div>
+            </div>
+            <div class="round">
+                <div class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="small-round" onclick="mydropdownshow()">
+                    <div class="dropdown">
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="w3-dropdown-click">
+                            <div class="w3-button w3-black">
+                            </div>
+                            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="../login/index.html" class="w3-bar-item w3-button">ออกจากระบบ </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="content-fill-overtime">
+                <div class="name">
+                    รายละเอียดข้อมูลการทำงานล่วงเวลา
+                </div>
+                <div class="data-details">
+                    <div class="form-staff">
+                        <label class="section details">วันที่เริ่มทำงาน</label>
+                        <div class="box">
+                            <div class="data">
+                                05/07/2566
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">เวลาที่เริ่มทำงาน</label>
+                        <div class="box">
+                            <div class="data">
+                                23:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">วันสิ้นสุดการทำงาน</label>
+                        <div class="box">
+                            <div class="data">
+                                06/07/2566
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">เวลาสิ้นสุดการทำงาน</label>
+                        <div class="box">
+                            <div class="data">
+                                01:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">สถานะของวัน</label>
+                        <div class="box">
+                            <div class="data">
+                                วันปกติ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">โปรเจ็ค</label>
+                        <div class="box">
+                            <div class="data">
+                                MJU
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">โปรเจ็ค</label>
+                        <div class="box">
+                            <div class="data">
+                                MJU
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">รายละเอียดงาน</label>
+                        <div class="box">
+                            <div class="data">
+                                Test Defects
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">ชั่วโมง</label>
+                        <div class="box">
+                            <div class="data">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-staff">
+                        <label class="section details">นาที</label>
+                        <div class="box">
+                            <div class="data">
+                                -
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit">
+                    <a class="button-submit" href="./fill-in-overtime.html">
+                        <button class="confirm-details" input type="submit">เพิ่มโปรเจ็ค</button>
+                    </a>
+                </div>
+                <div class="view-time-history details">
+                    <a class="history" href="./overtime-work-history.html">
+                        <img class="ic-clock" src="../../assets/icons/ic-time.png">
+                        <div class="name-history">
+                            ดูประวัติการทำงานล่วงเวลา
+                        </div>
+                    </a>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+    <script>
+        function mydropdownshow() {
+                var x = document.getElementById("Demo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+    </script>
+</body>
+
+</html>

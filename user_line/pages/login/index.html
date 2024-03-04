@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/index.css">
+    <script src="./app.js" type="module"></script>
+</head>
+<body>
+    <div class="login">
+        <div class="second-menu">
+            <div>
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    Management System
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="name">
+                กรุณากรอก Username&Password
+            </div>
+            <form>
+                <div id="datalogin">
+                    <div class="fill-info">
+                        <input class="message" type="text" id="email" name="employeename" placeholder="email" required>
+                        <div class="section-turn">
+                            <input type="password" id="password" placeholder="password" required>
+                            <img class="turn-off" src="../../assets/icons/ic-turn off.png" onclick="myFunction()">
+                            <img class="turn-on" src="../../assets/icons/Group-showpassword.png" style="display: none;"
+                                onclick="show()">
+                        </div>
+                    </div>
+                    <div class="chack-password">
+                        <div class="remember-password">
+                            <input class="" type="checkbox">
+                            จำรหัสผ่านไว้
+                        </div>
+                        <a href="./forgot.html">
+                            <div class="forgot-password">
+                                ลืมรหัสผ่าน
+                            </div>
+                        </a>
+                    </div>
+                    <button class="button-login" type="submit" id="login" value="login" onclick="mylogin()">
+                        <div class="submit">
+                            เข้าสู่ระบบ
+                        </div>
+                    </button>
+                </div>
+            </form>
+                
+           
+        </div>
+    </div>
+    <script >
+        function myFunction() {
+            var x = document.getElementById("password");
+            var y = document.getElementsByClassName("turn-off");
+            y[0].style.display = "none";
+            var z = document.getElementsByClassName("turn-on");
+            z[0].style.display = "block";
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+        function show() {
+            console.log(y)
+            var x = document.getElementById("password");
+            var z = document.getElementsByClassName("turn-on");
+            z[0].style.display = "none";
+            var y = document.getElementsByClassName("turn-off");
+            y[0].style.display = "block";
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        function mylogin() {
+            const x = document.getElementsByClassName("button-login");
+            const queryString = window.location.search;
+            // console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const page = urlParams.get('page')
+            if (page === 'over-time') {
+                window.location.href = '/user_line/pages/over-time/fill-in-overtime.html';
+            } else {
+                window.location.href = '/user_line/pages/record/record-time-for-work.html';
+            }
+            // console.log(page);
+        }
+       
+    </script>
+</body>
+</html>

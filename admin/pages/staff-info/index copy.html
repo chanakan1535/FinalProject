@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ข้อมูลพนักงาน</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+
+  <body>
+    <div class="staff-info-list">
+      <div class="bar">
+        <div>
+          <div class="company">Company Time</div>
+          <div class="management">Management System</div>
+        </div>
+        <div class="user">
+          User Admin
+          <div class="dropdown">
+            <div class="ic-dropdown">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content">
+              <a href="../edit-password-admin.html">เปลี่ยนรหัสผ่าน</a>
+              <a href="../index.html">ออกจากระบบ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="menubar">
+          <div class="menu">
+            <a href="#" class="select">ข้อมูลพนักงาน</a>
+            <a href="../../pages/time-attendance/index.html"
+              >การเข้างาน-เลิกงาน</a
+            >
+            <a href="../../pages/overtime-work/index.html">การทำงานล่วงเวลา</a>
+            <a href="../../pages/manage-project/index.html">จัดการโปรเจ็ค</a>
+          </div>
+        </div>
+        <div class="data">
+          <div class="header">
+            <div class="name">ข้อมูลพนักงาน</div>
+            <div class="head-right">
+              <div class="search-data-staff">
+                <input class="search-data" type="text" placeholder="ค้นหา.." />
+                <img class="ic-search" src="../../assets/icons/ic-search.png" />
+              </div>
+              <a href="./add.html">
+                <button class="add" type="submit">
+                  <img class="image" src="../../assets/icons/ic-plus.png" />
+                  <div class="add-data">เพิ่มข้อมูลพนักงาน</div>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="table">
+            <table id="customersstaff-info">
+              <tr>
+                <th>ลำดับ</th>
+                <th>ชื่อ-สกุล</th>
+                <th>(วันเกิด) วัน/เดือน/ปี</th>
+                <th>ที่อยู่</th>
+                <th>ตำแหน่ง</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>กล้วยหอม จอมซน</td>
+                <td>15 ธ.ค.2022</td>
+                <td>
+                  11 ม.3 ต.บ่อสลี <br />
+                  อ.ฮอด จ.เชียงใหม่ 50240
+                </td>
+                <td>Front End Developer</td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                    <!-- <a id="myBtn">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </a> -->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>พินิตย์ ติณณ์นันทิพัตณ์</td>
+                <td>02 ก.ค.1995</td>
+                <td>
+                  383/1 ม.4 ต.ป่าไผ่ <br />
+                  อ.สันทราย จ.เชียงใหม่ 50290
+                </td>
+                <td>Full Stack Developer</td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                    <!-- <a id="myBtn">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </a> -->
+                    <!-- <a>
+                                    <button onclick="myFunction()">
+                                        <div class="icon-trash">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </button>
+                                    </a> -->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>ปริญญา แซ่อั้ง</td>
+                <td>20 ก.พ.1990</td>
+                <td>
+                  283 ม.9 ต.หนองหาร <br />
+                  อ.สันทราย จ.เชียงใหม่ 50290
+                </td>
+                <td>Software Engineer</td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="icon">
+                    <a href="./edit.html">
+                      <div class="icon-pen">
+                        <i class="fa-solid fa-pen"></i>
+                      </div>
+                    </a>
+                    <a onclick="myFunction()">
+                      <div class="icon-trash">
+                        <i class="fa-solid fa-trash"></i>
+                      </div>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="next-page">
+            <div class="left">
+              <div class="show">แสดง</div>
+              <input class="number" type="text" value="" placeholder="10" />
+              <div class="list">รายการ/หน้า</div>
+            </div>
+            <div class="right">
+              <button class="back" type="submit" value="">
+                <img class="group" src="../../assets/icons/ic-less than.png" />
+              </button>
+              <button class="page-one" type="submit" value="">
+                <div>1</div>
+              </button>
+              <button class="page-two" type="submit" value="">
+                <div>2</div>
+              </button>
+              <button class="next" type="submit" value="">
+                <img
+                  class="group"
+                  src="../../assets/icons/ic-greater than.png"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="close">
+            <div id="on-right">&times;</div>
+          </div>
+          <div class="modal-confirm">ยืนยันการลบใช่ไหม</div>
+          <div class="delete">
+            <button class="button-no">ไม่ใช่</button>
+            <button class="button-yes">ใช่</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+      // var btn = document.getElementById("myBtn");
+      // var btnt = document.getElementById("myBtnt");
+      var span = document.getElementById("on-right");
+      var buttonno = document.getElementsByClassName("button-no")[0];
+      var buttonyes = document.getElementsByClassName("button-yes")[0];
+      var icontrash = document.getElementsByClassName("icon-trash")[0];
+      // btn.onclick = function () {
+      //     console.log("");
+      //     modal.style.display = "block";
+      // }
+      // btnt.onclick = function () {
+      //     console.log("");
+      //     modal.style.display = "block";
+      // }
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+      buttonno.onclick = function () {
+        modal.style.display = "none";
+      };
+      buttonyes.onclick = function () {
+        modal.style.display = "none";
+      };
+      icontrash.onclick = function () {
+        modal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      function myFunction() {
+        modal.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

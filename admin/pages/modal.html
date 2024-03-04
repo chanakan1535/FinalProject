@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" 
+    />
+    <link rel="stylesheet" href="../style/index.css">
+</head>
+<body>
+    <button id="myBtn">Open Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="close">
+                <div class="right">
+                    &times;
+                </div>
+            </div>
+            <div class="modal-confirm">
+                ยืนยันการลบใช่ไหม
+            </div>
+            <div class="delete">
+                <button class="button-no">ไม่ใช่</button>
+                <button class="button-yes">ใช่</button>
+            </div>
+        </div>        
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("right")[0];
+        var buttonno = document.getElementsByClassName("button-no")[0];
+        var buttonyes = document.getElementsByClassName("button-yes")[0];
+        var icontrash = document.getElementsByClassName("icon-trash")[0];
+        btn.onclick = function () {
+                modal.style.display = "block";
+            }
+        span.onclick = function () {
+                modal.style.display = "none";
+            }
+        buttonno.onclick = function () {
+                    modal.style.display = "none";
+                }
+        buttonyes.onclick = function () {
+                modal.style.display = "none";
+            }
+        icontrash.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+    </script>
+</body>
+</html>

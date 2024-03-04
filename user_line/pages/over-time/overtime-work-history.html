@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการทำงานล่วงเวลา</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/index.css">
+</head>
+
+<body>
+    <div class="overtime-work-history">
+        <div class="second-menu">
+            <div class="head-bar">
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    management System
+                </div>
+            </div>
+            <div class="round">
+                <div class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="small-round" onclick="mydropdownshow()">
+                    <div class="dropdown">
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="w3-dropdown-click">
+                            <div class="w3-button w3-black">
+                            </div>
+                            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="../login/index.html" class="w3-bar-item w3-button">ออกจากระบบ </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-record">
+            <div class="frame">
+                <div class="general-infor">
+                    ประวัติการทำงานล่วงเวลา
+                </div>
+            </div>
+            <div class="calenda">
+                <div class="search-data-staff working-time">
+                    <input class="start" placeholder="เริ่มต้น" type="text" onfocus="(this.type = 'date')" id="date">
+                    <div class="center">
+                        -
+                    </div>
+                    <input class="end" placeholder="สิ้นสุด" type="text" onfocus="(this.type = 'date')" id="date">
+                </div>
+            </div>
+            <div class="table-working-time">
+                <table class="work-time">
+                    <tr>
+                        <th>วันที่เริ่มทำงานล่วงเวลา</th>
+                        <th>เวลาที่เริ่มทำงาน</th>
+                        <th>วันที่สิ้นสุดการทำงาน</th>
+                        <th>เวลาสิ้นสุดการทำงาน</th>
+                        <th>สถานะวัน</th>
+                        <th>โปรเจ็ค</th>
+                        <th>ชั่วโมง</th>
+                        <th>นาที</th>
+                        <th>รายละเอียดงาน</th>
+                    </tr>
+                    <tr>
+                        <td>05/07/2566</td>
+                        <td>23:00</td>
+                        <td>06/07/2566</td>
+                        <td>01:00</td>
+                        <td>วันปกติ</td>
+                        <td>MJU</td>
+                        <td>3</td>
+                        <td>-</td>
+                        <td>Test Defects</td>
+                    </tr>
+                    <tr>
+                        <td>06/07/2566</td>
+                        <td>02:00</td>
+                        <td>06/07/2566</td>
+                        <td>05:00</td>
+                        <td>วันปกติ</td>
+                        <td>CRMU</td>
+                        <td>3</td>
+                        <td>-</td>
+                        <td>Test Defects</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            function mydropdownshow() {
+                    var x = document.getElementById("Demo");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else {
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+        </script>
+</body>
+
+</html>

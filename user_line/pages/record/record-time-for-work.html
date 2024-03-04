@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงเวลาเข้างานเลิกงาน</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/index.css">
+</head>
+
+<body>
+    <div class="recoed-time-for-work">
+        <div class="second-menu">
+            <div>
+                <div class="company">
+                    Company Time
+                </div>
+                <div class="management">
+                    Management System
+                </div>
+            </div>
+            <div class="round">
+                <div class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="small-round" onclick="mydropdownshow()">
+                    <div class="dropdown">
+                        <div class="icon-dropdown">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="w3-dropdown-click">
+                            <div class="w3-button w3-black">
+                            </div>
+                            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+                                <a href="../login/index.html" class="w3-bar-item w3-button" >ออกจากระบบ </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-record">
+            <div class="user-name">
+                <div class="frame">
+                    <div class="general-infor">
+                        ข้อมูลทั่วไป
+                    </div>
+                    <div class="name">
+                        ชนากานต์ ตันตาวิน
+                    </div>
+                </div>
+            </div>
+            <div class="center-menu">
+                <div class="clock-in">
+                    เข้างาน
+                </div>
+                <a id="myBtn">
+                    <div class="round-time-stamp">
+                        <div class="time-stamp" type="submit" value="ลงเวลา">
+                            <img class="ic-plus-recrod" src="../../assets/icons/ic-add.png">
+                            <div>
+                                ลงเวลา
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clock-out">
+                    เลิกงาน
+                </div>
+            </div>
+            <a href="./working-time-history.html">
+                <div class="view-time-history">
+                    <img class="ic-clock" src="../../assets/icons/ic-time.png">
+                    <div class="name-history">
+                        ดูประวัติการเข้างาน-เลิกงาน
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="close">
+                    <div id="right">
+                        &times;
+                    </div>
+                </div>
+                <div class="modal-confirm">
+                    ยืนยันการลบใช่ไหม
+                </div>
+                <div class="delete">
+                    <button class="button-no">ไม่ใช่</button>
+                <a href="./start-work.html">
+                    <button class="button-yes">ใช่</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementById("right");
+        var buttonno = document.getElementsByClassName("button-no")[0];
+        var buttonyes = document.getElementsByClassName("button-yes")[0];
+        var roundtimestamp = document.getElementsByClassName("round-time-stamp")[0];
+        var timestamp = document.getElementsByClassName("time-stamp")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+            console.log("polk");
+        }
+        buttonno.onclick = function () {
+            modal.style.display = "none";
+        }
+        buttonyes.onclick = function () {
+            modal.style.display = "none";
+        }
+        roundtimestamp.onclick = function () {
+            modal.style.display = "none";
+        }
+        timestamp.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        // function mydropdownshow(){
+        //     var x = document.getElementsByClassName("w3-dropdown-content w3-bar-block w3-border");
+        //     console.log(x);
+        //     x[0].style.display = "block";
+
+        // }
+        function mydropdownshow() {
+                var x = document.getElementById("Demo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+    </script>
+</body>
+
+</html>

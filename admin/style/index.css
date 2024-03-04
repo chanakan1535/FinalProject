@@ -1,0 +1,1108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sarabun', sans-serif;
+}
+/* top */
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 56px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bar .company {
+    color: #2196F3;
+    font-weight: bold;
+    padding-left: 8px;
+}
+.bar .management {
+    padding-left: 8px;
+}
+.bar .user {
+    display: flex;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    padding-right: 32px;
+}
+.ic-dropdown{
+    padding-left: 8px;
+    cursor: pointer;
+}
+/* .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+} */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    width: 150px;
+    height: 100px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3f78ff;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* left menuber */
+.menubar {
+    width: 265px;
+    height: calc(100vh - 56.8px);
+    background-color: #59A4E0;
+}
+.menu {
+    width: 100%;
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu a {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    width: 200px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    color: #ffffff;
+}
+.menu a.select {
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(250, 250, 250, 0.2);
+}
+.menu a:hover {
+    border-radius: 6px;
+    background-color: rgba(250, 250, 250, 0.2);
+}
+/* right content */
+.main {
+    display: flex;
+}
+.main .data {
+    width: calc(100vw - 345px);
+    height: calc(100vh - 56.8px);
+    padding: 0px 40px;
+    overflow-y: auto;
+}
+.main .data .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
+.name {
+    color: #000000;
+    font-family: Sarabun;
+    font-size: 20px;
+    font-weight: 700;
+}
+.export {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 42px;
+    border-radius: 6px;
+    color: #3f78ff;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+}
+.export:hover{
+    color: #3f78ff;
+    border-color: #3f78ff;
+}
+.image {
+    width: 32px;
+    height: 32px;
+    color: #18a426;
+}
+.search {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    overflow-x: auto;
+}
+.search-left {
+    display: flex;
+}
+.search-data-staff {
+    display: flex;
+    align-items: center;
+    width: 256px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+input[type=text].search-data {
+    border-style: none;
+    padding-left: 12px;
+    
+}
+.start-time {
+    margin-left: 12px;
+
+}
+.ic-search {
+    width: 20px;
+    height: 20px;
+}
+.select-time {
+    display: flex;
+    padding-left: 16px;
+    align-items: center;
+}
+.select-start-time {
+    display: flex;
+    align-items: center;
+    width: 203px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.start-time {
+    border-style: none;
+    padding-left: 12px;
+}
+.ic-start-time {
+    width: 20px;
+    height: 20px;
+}
+.center {
+    margin: 6px 8px;
+}
+.select-end-date {
+    display: flex;
+    align-items: center;
+    width: 203px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.end-time {
+    border-style: none;
+    padding-left: 12px;
+}
+.ic-endtime {
+    width: 20px;
+    height: 20px;
+}
+.button-report {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 246px;
+    height: 42px;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #59A4E0;
+    border: 1px solid;
+    margin-left: 32px;
+}
+.button-report:hover{
+    background-color: #3b74de;
+    
+}
+.table {
+    overflow: auto;
+    margin: 24px 0px 0px;
+    max-height: 500px;
+}
+#employeeTable{
+    border-collapse: collapse;
+}
+.displayresponsive{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 48px;
+}
+#customers{
+    max-width: 600px;
+    /* ความกว้างสูงสุดของตาราง */
+    min-height: 650px;
+    border-collapse: collapse;
+}
+#customers td,
+#customers th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 48px;
+    min-width: 180px;
+    /* ความกว้างขั้นต่ำของเซลล์หรือหัวข้อ */
+    max-width: 200px;
+    /* กำหนดความกว้างสูงสุดของเซลล์เป็น 200px */
+    white-space: nowrap;
+    /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+    text-overflow: ellipsis;
+    /* แสดงเครื่องหมาย "..." ถ้าข้อความยาวเกินไป */
+    overflow: hidden;
+    /* ซ่อนส่วนที่เกินของข้อความ */
+}
+/* ข้อมูลในส่วนตารางของหน้าข้อมูลพนักงาน */
+#customersstaff-info {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+#customersstaff-info td,
+#customersstaff-info th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 48px;
+    height: 50px;
+    white-space: nowrap;
+    /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+    text-overflow: ellipsis;
+    /* แสดงเครื่องหมาย "..." ถ้าข้อความยาวเกินไป */
+    overflow: hidden;
+    /* ซ่อนส่วนที่เกินของข้อความ */
+}
+#customersstaff-info th {
+        text-align: left;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: rgba(0, 0, 0, 0.85);
+        background-color: #FAFAFA;
+        max-height: 400px;
+    }
+#customers th {
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #FAFAFA;
+    max-height: 400px;
+}
+.icon {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.45);
+}
+.delete-button{
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.edit-button{
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0000009c;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.icon.page-name:hover{
+    color: #3f78ff;
+    border-color: #3f78ff;
+}
+.icon.page-name {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details{
+    margin-left: 16px;
+    color: #000000;
+    font-family: Sarabun;
+    font-size: 16px;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.icon-pen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 36px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #0000009c;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.icon-pen:hover {
+    color: #3f78ff;
+    border-color: #3f78ff;
+}
+.icon-trash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 36px;
+    margin-left: 6px;
+    border-radius: 6px;
+    color: #0000009c;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.icon-trash:hover {
+    color: #3f78ff;
+    border-color: #3f78ff;
+}
+.next-page {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+.left {
+    display: flex;
+    flex-direction: row;
+}
+.show {
+    color: #000;
+    font-family: Sarabun;
+    font-size: 16px;
+}
+input[type=text].number {
+    width: 48px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0px 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back {
+    width: 35px;
+    height: 28px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.group {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    text-align: center;
+}
+.page-one {
+    width: 35px;
+    height: 28px;
+    margin: 0px 8px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #2196F3;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.page-two {
+    width: 35px;
+    height: 28px;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 8px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.next {
+    width: 35px;
+    height: 28px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* สถานะโปรเจ็ค */
+/* .status {
+    display: flex;
+    align-items: center;
+    width: 203px;
+    height: 42px;
+    border-radius: 6px;
+    margin-left: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+} */
+.message.select-project.status{
+    margin-left: 16px;
+}
+.status-project {
+    border-style: none;
+    padding-left: 12px;
+}
+.ic-status-project {
+    width: 20px;
+    height: 20px;
+}
+/* หน้าจัดการโปรเจ็ค ใช้ค้นหาข้อมูลกับเพิ่มข้อมูลพนักงาน */
+.head-right {
+    display: flex;
+}
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 146px;
+    height: 42px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 32px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.add:hover{
+    border-color: #3f78ff;
+}
+.add-data{
+    color: #1f84ff;
+}
+.image {
+    width: 24px;
+    height: 24px;
+}
+/* ใช้เป็นตัว hover ปุ่มที่จะกดไปหน้า details */
+.name-staff{
+    border-radius: 6px;
+    color: #1f84ff;
+}
+.name-staff:hover {
+    background-color: #B2DDFF;
+}
+/* ข้อมูลหน้าdetails */
+.second-menu {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    width: 100%;
+    background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.go-back {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.second-menu-right {
+    display: flex;
+    align-items: center;
+    padding-right: 32px;
+}
+.data-details {
+    padding: 0px 50px;
+    overflow-y: scroll;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 113.6px);
+}
+.select-time-details {
+    display: flex;
+    padding: 40px 0px;
+    align-items: center;
+}
+
+.select-start-time-details {
+    display: flex;
+    align-items: center;
+    width: 203px;
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.name-page{
+    color: #000000;
+    font-family: Sarabun;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 16px;
+}
+/* ข้อมูลในส่วนของหน้า edit */
+.main-edit {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+}
+/* ข้อมูลของหน้า add */
+.main-add {
+    background-color: #ffffff;
+    width: 100%;
+    /* height: calc(100% - 113.6px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+}
+.form-staff {
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    margin-bottom: 16px;
+    color: #000;
+    font-family: Sarabun;
+    font-size: 14px;
+}
+.data-add {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 32px;
+    column-gap: 32px;
+}
+.data-edit-password{
+    display: grid;
+    grid-template-columns: auto ;
+    row-gap: 32px;
+    
+}
+.message {
+    
+   
+    font-size: 16px;
+    font-family: Sarabun;
+}
+.cancel {
+    width: 164px;
+    height: 48px;
+    cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    font-family: Sarabun;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.cancel:hover{
+    color: #3f78ff;
+    border-color:#3f78ff;
+}
+.confirm {
+    width: 164px;
+    height: 48px;
+    margin-left: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Sarabun;
+    background-color: #2196F3;
+    border: 1px solid #2196F3 !important;
+}
+.confirm:hover{
+    background-color: #3b74de;;
+}
+.start-time.calenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 41px;
+    font-size: 16px;
+    font-family: Sarabun;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.time {
+    display: flex;
+    align-items: center;
+    
+}
+.submit {
+    display: flex;
+    margin-top: 32px;
+}
+
+/* การfocusของช่อง input type=text */
+input[type=text]:focus {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+input[type=text]{
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 42px;
+}
+input[type=time] {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 42px;
+}
+/* การfocusของช่อง input type=password */
+input[type=password]:focus {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+input[type=password] {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 42px;
+}
+/* การfocusของช่อง input type=date */
+input[type=date]:focus {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+input[type=date] {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 42px;
+}
+.button-submit{
+    width: 164px;
+    height: 48px;
+}
+/* ข้อมูลในหน้า edit staff-info */
+.message.employeename:disabled{
+    cursor: no-drop;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+.message.lastname:disabled {
+    cursor: no-drop;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+.button-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 146px;
+    height: 36px;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: #59A4E0;
+    border: 1px solid;
+    margin-right: 32px;
+}
+
+.button-edit:hover {
+    background-color: #3b74de;
+
+}
+/* ข้อมูลในส่วนของ การจัดการโปรเจ็ค */
+.data-create-project {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 32px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    /* margin-top: 130px; */
+    margin-right: 32px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.approve {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin-top: 80px;
+}
+
+.status-project {
+    padding-top: 8px;
+
+}
+/* ข้อมูลในหน้า report */
+.data-report {
+    overflow-y: scroll;
+    
+    height: calc(100vh - 113.6px);
+}
+.report-data {
+    margin: 0px 40px;
+}
+.head-report{
+    padding-top: 40px;
+}
+.select-data {
+    display: flex;
+    padding: 16px 0px;
+}
+.total-working-hours {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 272px;
+    height: 52px;
+    background-color: rgba(89, 164, 224, 0.11);
+}
+
+.total-time {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Sarabun;
+}
+#customers-report{
+    min-width: 100%;
+    border-collapse: collapse;
+}
+#customers-report td,
+#customers-report th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 48px;
+    height: 50px;
+    white-space: nowrap;
+    /* ไม่ให้ข้อความขึ้นบรรทัดใหม่ */
+    text-overflow: ellipsis;
+    /* แสดงเครื่องหมาย "..." ถ้าข้อความยาวเกินไป */
+    overflow: hidden;
+    /* ซ่อนส่วนที่เกินของข้อความ */
+}
+#customers-report th {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.85);
+    background-color: #FAFAFA;
+}
+/* หน้าedit การทำงานล่วงเวลา */
+.data-edit{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 32px;
+    column-gap: 32px;
+}
+.message.select-project{
+padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 230px;
+    height: 42px;
+}
+.message.select-project:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+}
+/* การสร้างตัว modal */
+.modal {
+    display: none
+    ;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 150px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+.modal-content {
+    width: 340px;
+    height: 206px;
+    margin: auto;
+    border-radius: 6px;
+    border: 1px solid #888;
+    background-color: #fefefe;
+}
+.delete{
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+}
+.modal-confirm{
+    color: #000;
+    font-family: sarabun;
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 24px;
+    text-align: center;
+}
+.button-no{
+    width: 50px;
+    height: 36px;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 6px;
+    margin-right: 64px;
+    font-family: sarabun;
+    border: 0px solid !important;
+    background-color: rgba(205, 198, 198, 0.56);
+}
+.button-yes {
+    width: 50px;
+    height: 36px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 6px;
+    font-family: sarabun;
+    background-color: #5BB6F9;
+    border: 0px solid !important;
+}
+.close{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+#on-right{
+    font-size: 24px;
+    cursor: pointer;
+    color: #0000009c;
+}
+/* ข้อมูลของช่อง input ที่มา icon dropdown */
+select.classic {
+    background-image:
+        linear-gradient(45deg, transparent 50%, rgb(0, 0, 0) 50%),
+        linear-gradient(135deg, rgb(0, 0, 0) 50%, transparent 50%),
+        linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+    margin-left: 16px;
+    border: thin solid rgba(0, 0, 0, 0.2);
+}
+select:focus-visible {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    /* border-radius: 6px; */
+    outline: none;
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border-radius: 6px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    /* reset */
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select.minimal {
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+select.minimal:focus {
+    background-image:
+        linear-gradient(45deg, #3f78ff 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, #3f78ff 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+    border-style: none;
+    outline: 0;
+}
+/* หน้าedit password */
+.section-turn{
+    position: relative;
+    cursor: pointer;
+}
+#myInput {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 400px;
+    height: 42px;
+}
+
+#myInput:hover {
+    border-color: #1f84ff;
+}
+
+#close-new-password {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 400px;
+    height: 42px;
+}
+
+#close-new-password:hover {
+    border-color: #1f84ff;
+}
+
+#confirm-password-again {
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-radius: 6px;
+    width: 400px;
+    height: 42px;
+}
+#confirm-password-again:hover {
+    border-color: #1f84ff;
+}
+.turn-off{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
+.turn-on{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}

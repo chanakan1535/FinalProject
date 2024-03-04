@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าล็อคอิน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <form action="./staff-info/index.html">
+        <div class="main">
+            <div class="content-login">
+                <div class="round">
+                    <div class="ic-login">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="company">
+                        Company Time
+                    </div>
+                    <div class="management">
+                        Management System
+                    </div>
+                </div>
+                <div>
+                    <input class="message-login" type="text" placeholder="Username">
+                </div>
+                <div>
+                    <div class="section-turn">
+                        <input type="password" value="" id="message-password" placeholder="password">
+                        <img class="turn-off" src="../assets/icons/ic-turn off.png" onclick="myFunction()">
+                        <img class="turn-on" src="../assets/icons/Group-showpassword.png" style="display: none;"
+                            onclick="show()">
+                    </div>
+                </div>
+            </div>
+            <button class="button">
+                <div class="submit-login">
+                    Login
+                </div>
+            </button>
+        </div>
+    </form>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("message-password");
+            var y = document.getElementsByClassName("turn-off");
+            y[0].style.display = "none";
+            var z = document.getElementsByClassName("turn-on");
+            z[0].style.display = "block";
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+        function show() {
+            console.log(y)
+            var x = document.getElementById("message-password");
+            var z = document.getElementsByClassName("turn-on");
+            z[0].style.display = "none";
+            var y = document.getElementsByClassName("turn-off");
+            y[0].style.display = "block";
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+
+            }
+        }
+        // function myFunction() {
+        //     var x = document.getElementById("password");
+        //     var y = document.getElementsByClassName("turn-off");
+        //     y[0].style.display = "none";
+        //     var z = document.getElementsByClassName("turn-on");
+        //     z[0].style.display = "block";
+        //     if (x.type === "password") {
+        //         x.type = "text";
+        //     } else {
+        //         x.type = "password";
+
+        //     }
+        // }
+        // function show() {
+        //     console.log(y)
+        //     var x = document.getElementById("password");
+        //     var z = document.getElementsByClassName("turn-on");
+        //     z[0].style.display = "none";
+        //     var y = document.getElementsByClassName("turn-off");
+        //     y[0].style.display = "block";
+        //     if (x.type === "password") {
+        //         x.type = "text";
+        //     } else {
+        //         x.type = "password";
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Sarabun', sans-serif;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(116, 189, 242, 0.31);
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-login {
+        display: flex;
+        justify-content: flex-start;
+        width: 670px;
+        height: 366px;
+        background-color: rgba(251, 251, 251, 0.3);
+        border-radius: 8px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        width: 387px;
+        height: 66px;
+        margin-top: 20px;
+        border-radius: 0px 0px 8px 8px;
+        background-color: rgba(251, 251, 251, 0.3);
+    }
+
+    .submit-login {
+        color: #2971A5;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #fcfeff;
+    }
+
+    .round {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 152px;
+        height: 152px;
+        background-color: #0d3f60;
+        border-radius: 50%;
+    }
+
+    .ic-login {
+        color: #ffffff;
+
+    }
+
+    .company {
+        color: #144568;
+        font-weight: bold;
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .management {
+        color: #144568;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    input[type=text] {
+
+        width: 402px;
+        height: 57px;
+        padding: 0px 16px;
+        margin-top: 20px;
+        border: 0px;
+        outline: none;
+        border-radius: 6px;
+        background-color: rgba(20, 69, 104, 0.6);
+    }
+
+    /* input[type=text]:focus {
+    border-color: rgba(20, 69, 104, 0.6);
+} */
+    .message-login {
+        font-size: 14px;
+        color: #fffdfd;
+    }
+
+    input[type=password] {
+        width: 402px;
+        height: 57px;
+        border: 0px;
+        outline: none;
+        padding: 0px 16px;
+        margin-top: 20px;
+        border-radius: 6px;
+        background-color: rgba(20, 69, 104, 0.6);
+    }
+
+    #message-password {
+        font-size: 14px;
+        color: #fffdfd;
+    }
+
+    ::placeholder {
+        color: #fffdfd
+    }
+
+    .section-turn {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .turn-off {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top: 40px;
+    }
+
+    .turn-on {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top: 40px;
+    }
+</style>

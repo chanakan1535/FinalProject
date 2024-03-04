@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ข้อมูลพนักงาน</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"
+    />
+    <!-- Include DataTables Responsive CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://code.jquery.com/jquery-3.5.1.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"
+    ></script>
+    <!-- Include DataTables Responsive JavaScript -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.js"
+    ></script>
+    <link rel="stylesheet" href="../../style/index.css" />
+  </head>
+
+  <body>
+    <div class="staff-info-list">
+      <div class="bar">
+        <div>
+          <div class="company">Company Time</div>
+          <div class="management">Management System</div>
+        </div>
+        <div class="user">
+          User Admin
+          <div class="dropdown">
+            <div class="ic-dropdown">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-content">
+              <a href="../edit-password-admin.html">เปลี่ยนรหัสผ่าน</a>
+              <a href="../index.html">ออกจากระบบ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="menubar">
+          <div class="menu">
+            <a href="#" class="select">ข้อมูลพนักงาน</a>
+            <a href="../../pages/time-attendance/index.html"
+              >การเข้างาน-เลิกงาน</a
+            >
+            <a href="../../pages/overtime-work/index.html">การทำงานล่วงเวลา</a>
+            <a href="../../pages/manage-project/index.html">จัดการโปรเจ็ค</a>
+          </div>
+        </div>
+        <div class="data">
+          <div class="header">
+            <div class="name">ข้อมูลพนักงาน</div>
+            <div class="head-right">
+              <div class="search-data-staff">
+                <input class="search-data" type="text" placeholder="ค้นหา.." />
+                <img class="ic-search" src="../../assets/icons/ic-search.png" />
+              </div>
+              <a href="./add.html">
+                <button class="add" type="submit">
+                  <img class="image" src="../../assets/icons/ic-plus.png" />
+                  <div class="add-data">เพิ่มข้อมูลพนักงาน</div>
+                </button>
+              </a>
+            </div>
+          </div>
+          <br /><br />
+          <!-- Add this table structure where you want to display employee data -->
+          <table id="employeeTable" class="display responsive">
+            <td>
+              <tr>
+                <th>ลำดับ</th>
+                <th>ชื่อ-สกุล</th>
+                <th>(วันเกิด) วัน/เดือน/ปี</th>
+                <th>ที่อยู่</th>
+                <th>ตำแหน่ง</th>
+                <th>จัดการ</th>
+              </tr>
+            </td>
+            <tbody>
+              <!-- Table body will be filled by DataTables -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="close">
+            <div id="on-right">&times;</div>
+          </div>
+          <div class="modal-confirm">ยืนยันการลบใช่ไหม</div>
+          <div class="delete">
+            <button class="button-no">ไม่ใช่</button>
+            <button class="button-yes">ใช่</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" defer src="./staff.js"></script>
+
+  <script type="module">
+    import { getAllEmployees } from "./staff.js"; // Update the path accordingly
+
+    async function fetchData() {
+    try {
+        const employees = await getAllEmployees();
+        console.log(employees);
+
+        // Convert your data to an array of arrays (2D array)
+        const dataTableData = employees.map((employee, index) => {
+          // Adjust the order based on your actual data structure
+          return [
+            index + 1, // ลำดับ
+            `${employee.fname} ${employee.lname}`, // ชื่อ-สกุล
+            employee.birthDate, // (วันเกิด) วัน/เดือน/ปี
+            employee.address, // ที่อยู่
+            employee.role, // ตำแหน่ง
+            `<div class="button-container">
+                <button class="delete-button" data-index="${index}"><i class="fa-solid fa-trash"></i></button>
+                <button class="edit-button" data-index="${index}"><i class="fa-solid fa-edit"></i></button>
+              </div>`, // จัดการ and edit
+          ];
+        });
+
+        // Define your table using DataTables with responsive extension
+        $("#employeeTable").DataTable({
+          data: dataTableData,
+          columns: [
+            { title: "ลำดับ" },
+            { title: "ชื่อ-สกุล" },
+            { title: "(วันเกิด) วัน/เดือน/ปี" },
+            { title: "ที่อยู่" },
+            { title: "ตำแหน่ง" },
+            { title: "จัดการ" },
+          ],
+          order: [[0, "asc"]],
+          initComplete: function () {
+            // Trigger a click on the first column header to apply initial sorting
+            $("#employeeTable thead th:first-child").click();
+          },
+          columnDefs: [
+            { targets: 5, orderable: false }, // Disable sorting for the "จัดการ" column
+            { targets: [0, 1, 2, 3, 4, 5], className: "dt-body-center" } //document.write("<br>")
+ // Center align content in the "จัดการ" column
+          ],
+          responsive: true, // Enable responsiveness
+        });
+
+        // Add an event listener for the delete button clicks
+        $("#employeeTable tbody").on("click", ".delete-button", function () {
+          const index = $(this).data("index");
+          confirm("ยืนยันการลบ");
+          // Handle the delete action using the index or other identifier
+          console.log("Delete button clicked for index:", index);
+        });
+
+        // Add an event listener for the edit button clicks
+        $("#employeeTable tbody").on("click", ".edit-button", function () {
+          const index = $(this).data("index");
+          alert("แก้ไข");
+          // Handle the edit action using the index or other identifier
+          console.log("Edit button clicked for index:", index);
+        });
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    }
+
+    // Call fetchData to initiate data retrieval
+    fetchData();
+
+    //   var modal = document.getElementById("myModal");
+    //   // var btn = document.getElementById("myBtn");
+    //   // var btnt = document.getElementById("myBtnt");
+    //   var span = document.getElementById("on-right");
+    //   var buttonno = document.getElementsByClassName("button-no")[0];
+    //   var buttonyes = document.getElementsByClassName("button-yes")[0];
+    //   var icontrash = document.getElementsByClassName("icon-trash")[0];
+    //   // btn.onclick = function () {
+    //     console.log("");
+    //     modal.style.display = "block";
+    // }
+    // btnt.onclick = function () {
+    //     console.log("");
+    //     modal.style.display = "block";
+    // }
+    //   span.onclick = function () {
+    //     modal.style.display = "none";
+    //   };
+    //   buttonno.onclick = function () {
+    //     modal.style.display = "none";
+    //   };
+    //   buttonyes.onclick = function () {
+    //     modal.style.display = "none";
+    //   };
+    //   icontrash.onclick = function () {
+    //     modal.style.display = "none";
+    //   };
+    //   window.onclick = function (event) {
+    //     if (event.target == modal) {
+    //       modal.style.display = "none";
+    //     }
+    //   };
+    //   function myFunction() {
+    //     modal.style.display = "block";
+    //   }
+    </script>
+  </body>
+</html>
